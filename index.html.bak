@@ -36,7 +36,9 @@
 
 <body>
     <div id="header" data-role="header">
+        <a id="openCamera" data-icon="camera" data-iconpos="notext" data-role="button" data-theme="a"></a>
         <h1 id="title ">OurDictionary</h1>
+        <a id="openDictionary" data-icon="search" data-iconpos="notext" data-role="button" data-theme="a"></a>
     </div>
     <a data-icon="plus" data-theme="a" data-role="button" href="create.html">Create New Word</a>
 </body>

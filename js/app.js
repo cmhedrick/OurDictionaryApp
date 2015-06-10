@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', function () {
 var word = "";
 var definition = "";
 var picture;
+var dictjson;
 $(document).ready(function () {
     console.log("jQM loaded");
     $("#takePicture").click(function () {
@@ -51,4 +52,13 @@ $(document).ready(function () {
     $("#pictureContinue").click(function(){
         // store subtitle
     });
+    $.get( "http://localhost:8000/dictionaries/list/", function( json ) {
+        dictjson = $.parseJSON(json)
+        for (var i = 0; i < dictjson.length; i++) {
+            //gets username
+            pk = dictjson[i].pk
+            subject = dictjson[i].fields.subject
+            $("").append(pk);
+    }, "json" );
+
 });
